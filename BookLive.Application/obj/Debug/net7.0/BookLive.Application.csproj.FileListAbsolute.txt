@@ -1,0 +1,17 @@
+C:\Users\groMM\RiderProjects\BookLive\BookLive.Application\bin\Debug\net7.0\BookLive.Application.deps.json
+C:\Users\groMM\RiderProjects\BookLive\BookLive.Application\bin\Debug\net7.0\BookLive.Application.dll
+C:\Users\groMM\RiderProjects\BookLive\BookLive.Application\bin\Debug\net7.0\BookLive.Application.pdb
+C:\Users\groMM\RiderProjects\BookLive\BookLive.Application\bin\Debug\net7.0\BookLive.Core.dll
+C:\Users\groMM\RiderProjects\BookLive\BookLive.Application\bin\Debug\net7.0\BookLive.Persistent.dll
+C:\Users\groMM\RiderProjects\BookLive\BookLive.Application\bin\Debug\net7.0\BookLive.Persistent.pdb
+C:\Users\groMM\RiderProjects\BookLive\BookLive.Application\bin\Debug\net7.0\BookLive.Core.pdb
+C:\Users\groMM\RiderProjects\BookLive\BookLive.Application\obj\Debug\net7.0\BookLive.Application.csproj.AssemblyReference.cache
+C:\Users\groMM\RiderProjects\BookLive\BookLive.Application\obj\Debug\net7.0\BookLive.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\groMM\RiderProjects\BookLive\BookLive.Application\obj\Debug\net7.0\BookLive.Application.AssemblyInfoInputs.cache
+C:\Users\groMM\RiderProjects\BookLive\BookLive.Application\obj\Debug\net7.0\BookLive.Application.AssemblyInfo.cs
+C:\Users\groMM\RiderProjects\BookLive\BookLive.Application\obj\Debug\net7.0\BookLive.Application.csproj.CoreCompileInputs.cache
+C:\Users\groMM\RiderProjects\BookLive\BookLive.Application\obj\Debug\net7.0\BookLive.Application.csproj.CopyComplete
+C:\Users\groMM\RiderProjects\BookLive\BookLive.Application\obj\Debug\net7.0\BookLive.Application.dll
+C:\Users\groMM\RiderProjects\BookLive\BookLive.Application\obj\Debug\net7.0\refint\BookLive.Application.dll
+C:\Users\groMM\RiderProjects\BookLive\BookLive.Application\obj\Debug\net7.0\BookLive.Application.pdb
+C:\Users\groMM\RiderProjects\BookLive\BookLive.Application\obj\Debug\net7.0\ref\BookLive.Application.dll

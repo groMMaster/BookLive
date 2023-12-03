@@ -1,0 +1,154 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:viewModels="clr-namespace:BookLive.UI.ViewModels"
+        mc:Ignorable="d" d:DesignWidth="640" d:DesignHeight="320"
+        x:Class="BookLive.UI.Views.AddBookWindow"
+        Title="AddBookWindow"
+        TransparencyLevelHint="AcrylicBlur"
+        WindowStartupLocation="CenterOwner"
+        SystemDecorations="BorderOnly"
+        Width="640" Height="320"
+        CanResize="False"
+        ExtendClientAreaToDecorationsHint="True"
+        ExtendClientAreaTitleBarHeightHint="0"
+        x:DataType="viewModels:AddBookViewModel">
+
+	<Grid>
+		<Grid Background="Gainsboro"
+			  VerticalAlignment="Top"
+              Height="30"
+              ColumnDefinitions="*,40">
+			<TextBlock Text="Карточка книги"
+					   Margin="7"
+					   Grid.Column="0"/>
+			<Button Click="Close"
+					Grid.Column="1" Background="Gainsboro">
+				<Image Source="/Assets/close.png"></Image>
+			</Button>
+		</Grid>
+
+		<Grid RowDefinitions="30,*,*" 
+              ColumnDefinitions="*,165" Margin="15">
+
+			<Grid RowDefinitions="50,15,50,15,50,15,50"
+                  Grid.Row="1" Grid.Column="0">
+
+				<Grid ColumnDefinitions="300,30,110"
+					  Grid.Row="0">
+
+					<Grid RowDefinitions="30,25"
+						  Grid.Column="0">
+						<TextBlock Text="Название" Grid.Row="0"/>
+						<TextBox VerticalAlignment="Bottom" 
+                                 Text="{Binding ReadBook.Book.Name}"
+                                 Grid.Row="1" />
+					</Grid >
+
+					<Grid RowDefinitions="30,25"
+						  Column="2">
+						<TextBlock Text="Тип" Grid.Row="0"/>
+						<ComboBox VerticalAlignment="Bottom"
+								  ItemsSource="{Binding BookSizes}"
+								  SelectedIndex="{Binding ReadBook.Book.Size}"
+								  Width="110"
+								  Grid.Row="1" />
+					</Grid>
+				</Grid>
+
+				<Grid ColumnDefinitions="350,30,25"
+					  Grid.Row="2">
+					<Grid RowDefinitions="30,25"
+						  Grid.Column="0">
+						<TextBlock Text="Автор" Grid.Row="0"/>
+						<TextBox VerticalAlignment="Bottom"
+								 Text="{Binding ReadBook.Book.Author.Name}"
+								 Grid.Row="1" />
+					</Grid >
+
+					<Grid RowDefinitions="30,25"
+						  Column="2">
+						<TextBlock Text="Год" Grid.Row="0"/>
+						<TextBox HorizontalAlignment="Left" VerticalAlignment="Bottom"
+								 HorizontalContentAlignment="Stretch"
+								 Text="{Binding ReadBook.Book.Year}"
+								 Grid.Row="1" />
+					</Grid>
+				</Grid>
+
+				<Grid ColumnDefinitions="120,30,110,30,247"
+					  Grid.Row="4">
+					<Grid RowDefinitions="30,25"
+						  Grid.Column="0">
+						<TextBlock Text="День окончания" Grid.Row="0"/>
+						<CalendarDatePicker VerticalAlignment="Bottom" SelectedDate="{Binding ReadBook.Date}"
+								 Grid.Row="1" />
+					</Grid >
+
+					<Grid RowDefinitions="23,30"
+						  Column="2">
+						<TextBlock Text="Формат" Grid.Row="0"/>
+
+						<Grid ColumnDefinitions="70,20,70"
+							  VerticalAlignment="Bottom"
+							  Grid.Row="1">
+							<ComboBox
+                                ItemsSource="{Binding BookTypes}"
+                                SelectedIndex="{Binding BookType}"
+                                Width="110"/>
+						</Grid>
+                    </Grid>
+
+                    <Grid x:Name="ReaderName" RowDefinitions="30,25"
+						  IsVisible="{Binding}"
+                          Grid.Column="4">
+                        <TextBlock Text="Чтец" Grid.Row="0"/>
+                        <TextBox VerticalAlignment="Bottom" Grid.Row="1" />
+                                            
+                    </Grid >
+				</Grid>
+            </Grid>
+
+			<Button x:Name="SaveImage" Background="White" 
+                    Height="159"
+                    HorizontalAlignment="Center" VerticalAlignment="Bottom"
+                    Grid.Row="1" Grid.Column="1"
+                    Click="SaveImage_OnClick">
+                <Image Source="{Binding ImagePath}" />
+
+			</Button>
+		</Grid>
+
+		<Grid ColumnDefinitions="80,100,330,3,*"
+			  VerticalAlignment="Bottom"
+			  Margin="15">
+			<Grid RowDefinitions="30,25"
+				  Grid.Column="0">
+				<TextBlock Text="Оценка" Grid.Row="0"/>
+				<TextBox VerticalAlignment="Bottom" HorizontalAlignment="Left"
+						 Width="50"
+						 Grid.Row="1" />
+			</Grid >
+
+			<Grid RowDefinitions="25,35"
+				  Column="2">
+				<Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+						HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+						FontSize="12"
+						Grid.Row="1"
+					    Content="Забыть мысли на электронной бумаге">
+				</Button>
+			</Grid>
+			<Grid RowDefinitions="25,35"
+				  Column="4">
+				<Button HorizontalAlignment="Stretch" VerticalAlignment="Stretch"
+						HorizontalContentAlignment="Center" VerticalContentAlignment="Center"
+						Content="Добавить"
+						FontSize="12"
+						Click="Add_OnClick"
+						Grid.Row="1" />
+			</Grid>
+		</Grid>
+    </Grid>
+</Window>
